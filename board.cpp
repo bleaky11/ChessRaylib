@@ -31,10 +31,23 @@ class pawn: public Piece{
             }possibleMoves.push_back({this->currPos[0], this->currPos[1]+movement});
             possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]+movement});
             possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]+movement});
+            //Add a check for enpassant later
         }
 };
 
-class board{
+class king: public Piece{
+    public:
+        int calcMovement() override{
+
+        }
+};
+
+/**
+ * Idea is to make a 8x8 matrix, each spot containing either a real piece or a blank piece
+ * 
+ * x coordinate works normally, y coordinate goes down instead of up to align with raylib
+ */
+class Board{
     public:
         vector<vector<Piece>> squares;
         void move(int startx, int starty, int endx, int endy){
