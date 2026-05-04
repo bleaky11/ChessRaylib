@@ -66,18 +66,13 @@ class king: public Piece{
                 }   
             }
         }
-        bool inDanger(Board boardState, int posX, int posY){
-            //To know which direction enemy pawns attack from 
-            //White is negative because black pawns attack from above, going positive means down
-            //from king it would mean black pawn is above you, which means negative y direction
-            int moveX = 1;
-            int moveY = 1;
-            if(bishopCheck(boardState, posX, posY, moveX, moveY))
-                return true;
-                
-            return false;
-        }
-        bool bishopCheck(Board boardState, int posX, int posY, int moveX, int moveY){
+        /**
+         * posX: Current X position
+         * posY: Current Y position
+         * moveX: positive or negative X movement
+         * moveY: positive or negative y movement
+         */
+        bool boardCheck(Board boardState, int posX, int posY, int moveX, int moveY){
             int tempX = posX;
             int tempY = posY;
             for(int i = 0; i < 8; i++){//Cut off early if encounters edge of board or other pieces
@@ -86,7 +81,7 @@ class king: public Piece{
                 if(boardState.squares.at(tempX).at(tempY).color == this->color){break;}//Blocked by ally check other direction
                 else if(boardState.squares.at(tempX).at(tempY).color == "Empty"){
                     continue;
-                }else{
+                }else if(abs(moveX) == abs(moveY)){//Diagonal Check
                     //PawnCheck
                     if(boardState.squares.at(tempX).at(tempY).pieceType == "pawn"){
                         if(tempY - posY == 1 && this->color == "Black" || tempY - posY == -1 && this->color == "White")
@@ -96,10 +91,51 @@ class king: public Piece{
                     else if(boardState.squares.at(tempX).at(tempY).pieceType == "queen" || boardState.squares.at(tempX).at(tempY).pieceType == "bishop"){
                         return true;
                     }
+                }else{//Cardinal Check
+                    if(boardState.squares.at(tempX).at(tempY).pieceType == "queen" || boardState.squares.at(tempX).at(tempY).pieceType == "rook"){
+                        return true;
+                    }
                 }
             }
             return false;
+        }bool knightCheck(Board boardState, int posX, int posY){
+            if(boardState.squares.at(posX + 2).at(posY + 1).pieceType == "knight"){
+                return true;
+            }else if(boardState.squares.at(posX + 1).at(posY + 2).pieceType == "knight"){
+                return true;
+            }else if(boardState.squares.at(posX - 2).at(posY + 1).pieceType == "knight"){
+                return true;
+            }else if(boardState.squares.at(posX - 1).at(posY + 2).pieceType == "knight"){
+                return true;
+            }else if(boardState.squares.at(posX + 2).at(posY - 1).pieceType == "knight"){
+                return true;
+            }else if(boardState.squares.at(posX + 1).at(posY - 2).pieceType == "knight"){
+                return true;
+            }else if(boardState.squares.at(posX - 2).at(posY - 1).pieceType == "knight"){
+                return true;
+            }else if(boardState.squares.at(posX - 1).at(posY - 2).pieceType == "knight"){
+                return true;
+            }return false;
         }
+        bool inDanger(Board boardState, int posX, int posY){
+            //To know which direction enemy pawns attack from 
+            //White is negative because black pawns attack from above, going positive means down
+            //from king it would mean black pawn is above you, which means negative y direction
+            
+            for(int i = 1; i >= -1; i--){
+                for(int j = 1; j >= -1; j--){
+                    if(!(i == 0 && j == 0)){
+                        if(boardCheck(boardState, posX, posY, 1, 1))
+                            return true;
+                    }
+                }
+            }
+            if(knightCheck(boardState, posX, posY)){
+                return true;
+            }
+            return false;
+        }
+        
     };
 
 /**
