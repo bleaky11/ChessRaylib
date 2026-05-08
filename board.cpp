@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 /**
  * Using default piece to fill in empty board space
  * Use subclasses if there is a piece there
@@ -23,41 +22,34 @@ class Piece{
          * 
          * Check isLegalMove later on to eliminate moves blocked by pieces, or if move endangers own king
          */
-        virtual int calcMovement(){
-            return 0;
-        }
+        virtual void calcMovement(){}
         vector<pair<int, int>> possibleMoves;
-        /**Starts from 0, goes left - right, up - down
-         * 0, 7, 56, 63 == rook
-         * 1, 6, 57, 62 == knights
-         * 2, 5, 58, 61 == bishops
-         * 3, 59 == queen
-         * 4, 60 == king
-         * 
-        */
-        int pieceID;
         string pieceType;
 };
 
 class pawn: public Piece{//Add enpassant and promotion
     public:
         /**Check later on if enemy piece exists diagonally to filter out diagonal moves */
-        int calcMovement() override{
+        void calcMovement() override{
             int movement;
             if(this->color == "White"){
                 movement = -1;
             }if(this->color == "Black"){
                 movement = 1;
-            }possibleMoves.push_back({this->currPos[0], this->currPos[1]+movement});
-            possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]+movement});
-            possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]+movement});
+            }if(this->currPos[1]+movement >= 0 && this->currPos[1]+movement < 8){
+                possibleMoves.push_back({this->currPos[0], this->currPos[1]+movement});
+                if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8)
+                    possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]+movement});
+                if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8)
+                    possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]+movement});
+            }
             //Add a check for enpassant later
         }
 };
 
 class king: public Piece{
     public:
-        int calcMovement() override{
+        void calcMovement() override{
             for(int horizonal = -1; horizonal <= 1; horizonal++){
                 for(int vertical = 1; vertical <= 1; vertical++){
                     if(horizonal != 0 && vertical != 0){
@@ -133,10 +125,118 @@ class king: public Piece{
             if(knightCheck(boardState, posX, posY)){
                 return true;
             }
-            return false;
+        return false;
         }
         
-    };
+};
+class bishop: public Piece{
+    public:
+        void calcMovement() override{
+            for(int i = 0; i < 8; i++){
+                bool atLeastOne = false;//Using this to break out if none of the directions work anymore(piece in middle of board)
+                if(this->currPos[0]+i < 8 && this->currPos[0]+i >= 0 && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
+                    possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]+i});
+                    atLeastOne = true;
+                }if(this->currPos[0]+i < 8 && this->currPos[0]+i >= 0 && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
+                    possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]-i});
+                    atLeastOne = true;
+                }if(this->currPos[0]-i < 8 && this->currPos[0]-i >= 0 && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
+                    possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]+i});
+                    atLeastOne = true;
+                }if(this->currPos[0]-i < 8 && this->currPos[0]-i >= 0 && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
+                    possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]-i});
+                    atLeastOne = true;
+                }if(!atLeastOne){
+                    return;
+                }
+            }
+        }
+};
+
+class rook: public Piece{
+    public:
+        void calcMovement(){
+            for(int i = 0; i < 8; i++){
+                bool atLeastOne = false;//Using this to break out if none of the directions work anymore(piece in middle of board)
+                if(this->currPos[0]+i < 8 && this->currPos[0]+i >= 0){
+                    possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]});
+                    atLeastOne = true;
+                }if(this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
+                    possibleMoves.push_back({this->currPos[0], this->currPos[1]+i});
+                    atLeastOne = true;
+                }if(this->currPos[0]-i < 8 && this->currPos[0]-i >= 0){
+                    possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]});
+                    atLeastOne = true;
+                }if(this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
+                    possibleMoves.push_back({this->currPos[0], this->currPos[1]-i});
+                    atLeastOne = true;
+                }if(!atLeastOne){
+                    return;
+                }
+            }
+        }
+};
+
+class queen: public Piece{
+    public:
+        void calcMovement(){
+            for(int i = 0; i < 8; i++){
+                bool atLeastOne = false;//Using this to break out if none of the directions work anymore(piece in middle of board)
+                if(this->currPos[0]+i < 8 && this->currPos[0]+i >= 0 && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
+                    possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]+i});
+                    atLeastOne = true;
+                }if(this->currPos[0]+i < 8 && this->currPos[0]+i >= 0 && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
+                    possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]-i});
+                    atLeastOne = true;
+                }if(this->currPos[0]-i < 8 && this->currPos[0]-i >= 0 && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
+                    possibleMoves.push_back({this->currPos[0]-i, this->currPos[0]+i});
+                    atLeastOne = true;
+                }if(this->currPos[0]-i < 8 && this->currPos[0]-i >= 0 && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
+                    possibleMoves.push_back({this->currPos[0]-i, this->currPos[0]-i});
+                    atLeastOne = true;
+                }if(this->currPos[0]+i < 8 && this->currPos[0]+i >= 0){
+                    possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]});
+                    atLeastOne = true;
+                }if(this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
+                    possibleMoves.push_back({this->currPos[0], this->currPos[1]+i});
+                    atLeastOne = true;
+                }if(this->currPos[0]-i < 8 && this->currPos[0]-i >= 0){
+                    possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]});
+                    atLeastOne = true;
+                }if(this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
+                    possibleMoves.push_back({this->currPos[0], this->currPos[1]-i});
+                    atLeastOne = true;
+                }if(!atLeastOne){
+                    return;
+                }
+            }
+        }
+};
+
+class knight: public Piece{
+    public:
+        void calcMovement(){
+            if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8 && this->currPos[1]+2 >= 0 && this->currPos[1]+2 < 8){
+                possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]+2});
+            }if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8 && this->currPos[1]-2 >= 0 && this->currPos[1]-2 < 8){
+                possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]-2});
+            }if(this->currPos[0]+2 >= 0 && this->currPos[0]+2 < 8 && this->currPos[1]+1 >= 0 && this->currPos[1]+1 < 8){
+                possibleMoves.push_back({this->currPos[0]+2, this->currPos[1]+1});
+            }if(this->currPos[0]-2 >= 0 && this->currPos[0]-2 < 8 && this->currPos[1]-1 >= 0 && this->currPos[1]-1 < 8){
+                possibleMoves.push_back({this->currPos[0]-2, this->currPos[1]-1});
+            }if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8 && this->currPos[1]-2 >= 0 && this->currPos[1]-2 < 8){
+                possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]-2});
+            }if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8 && this->currPos[1]+2 >= 0 && this->currPos[1]+2 < 8){
+                possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]+2});
+            }if(this->currPos[0]+2 >= 0 && this->currPos[0]+2 < 8 && this->currPos[1]-1 >= 0 && this->currPos[1]-1 < 8){
+                possibleMoves.push_back({this->currPos[0]+2, this->currPos[1]-1});
+            }if(this->currPos[0]-2 >= 0 && this->currPos[0]-2 < 8 && this->currPos[1]+1 >= 0 && this->currPos[1]+1 < 8){
+                possibleMoves.push_back({this->currPos[0]-2, this->currPos[1]+1});
+            }
+        }
+};
+
+    
 
 /**
  * Idea is to make a 8x8 matrix, each spot containing either a real piece or a blank piece
