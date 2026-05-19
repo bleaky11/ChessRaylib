@@ -14,7 +14,5 @@ class gameState{
         }
     private:
         string currentPlayer;
-        int whiteKingLoc;
-        int blackKingLoc;
 };
 
