@@ -1,5 +1,5 @@
 make:
-	cc main.cpp -o game \
+	g++ main.cpp -std=c++11 -o game \
 	-I/opt/homebrew/include \
 	-L/opt/homebrew/lib \
 	-lraylib \

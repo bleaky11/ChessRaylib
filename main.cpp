@@ -1,8 +1,11 @@
 #include "raylib.h"
+#include "board.cpp"
 
 int DrawBoard();
 
 int main() {
+    Board newBoard = Board();
+    newBoard.printBoard();
     InitWindow(800, 800, "raylib mac test");
     SetTargetFPS(30);
     Texture2D Rook = LoadTexture("./Assets/Rook.png");
@@ -32,5 +35,9 @@ int DrawBoard(){
         slot = !slot;
     }
     return 0;
+}
+
+int updateBoard(){
+
 }
 

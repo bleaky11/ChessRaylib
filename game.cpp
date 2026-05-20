@@ -1,16 +1,12 @@
 #include <board.cpp>
 
+using namespace std;
 
 class gameState{
     public:
         Board boardState;
-        Board initBoard(){
-            Board newBoard;
-            for(int i = 0; i < 8; i++){
-                for(int j = 0; j < 8; j++){
-                    
-                }
-            }
+        void printBoard(){
+
         }
     private:
         string currentPlayer;

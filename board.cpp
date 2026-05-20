@@ -1,5 +1,4 @@
 #include <string>
-#include <bits/stdc++.h>
 #include <vector>
 #include <cmath>
 #include <algorithm>
@@ -28,23 +27,18 @@ class Piece{
         virtual void calcMovement(vector<vector<Piece*>> boardState){}
         vector<pair<int, int>> possibleMoves;
         string pieceType;
-        Piece(){
-            currPos[0] = -1;
-            currPos[1] = -1;
-            color = "BLANK";
-            pieceType = "BLANK";
-        }
-        Piece(int x, int y){
+        Piece()
+            : color("BLANK"),
+            currPos{-1, 1},
+            pieceType("BLANK")
+        {}
+        Piece(int x, int y) : Piece(){
             currPos[0] = x;
             currPos[1] = y;
-            color = "BLANK";
-            pieceType = "BLANK";
         }
-        Piece(int x, int y, string color, string pieceType){
-            currPos[0] = x;
-            currPos[1] = y;
-            color = color;
-            pieceType = pieceType;
+        Piece(int x, int y, string inColor, string inPieceType) : Piece(x, y){
+            color = inColor;
+            pieceType = inPieceType;
         }
 };
 
@@ -70,6 +64,7 @@ class pawn: public Piece{//Add enpassant and promotion
             }
             //Add a check for enpassant later
         }
+        pawn(int posx, int posy, string color): Piece(posx, posy, color, "pawn"){}
 };
 
 class king: public Piece{
@@ -153,6 +148,7 @@ class king: public Piece{
             }
         return false;
         }
+        king(int posx, int posy, string color): Piece(posx, posy, color, "king"){}
         
 };
 class bishop: public Piece{
@@ -205,6 +201,7 @@ class bishop: public Piece{
                 }
             }
         }
+        bishop(int posx, int posy, string color): Piece(posx, posy, color, "bishop"){}
 };
 
 class rook: public Piece{
@@ -257,6 +254,7 @@ class rook: public Piece{
                 }
             }
         }
+        rook(int posx, int posy, string color): Piece(posx, posy, color, "rook"){}
 };
 
 class queen: public Piece{
@@ -349,6 +347,7 @@ class queen: public Piece{
                 }
             }
         }
+        queen(int posx, int posy, string color): Piece(posx, posy, color, "queen"){}
 };
 
 class knight: public Piece{
@@ -380,6 +379,7 @@ class knight: public Piece{
                 possibleMoves.push_back({this->currPos[0]-2, this->currPos[1]+1});
             }
         }
+        knight(int posx, int posy, string color): Piece(posx, posy, color, "knight"){}
 };
 
     
@@ -391,8 +391,8 @@ class knight: public Piece{
  */
 class Board{
     public:
-        pair<int, int> whiteKing = make_pair(3, 7);
-        pair<int, int> blackKing = make_pair(3, 0);
+        pair<int, int> whiteKing;
+        pair<int, int> blackKing;
         vector<vector<Piece*>> squares;
         /**
          * All possible moves that can be made by currSelected
@@ -414,7 +414,7 @@ class Board{
             Piece startPiece = *currSelected;
             int startx = currSelected->currPos[0];
             int starty = currSelected->currPos[1];
-            startPiece.calcMovement(squares);
+            startPiece.calcMovement(squares);//Using pointers, so I might not need to dynamic cast
             for(int i = 0; i < startPiece.possibleMoves.size(); i++){
                 int endx = startPiece.possibleMoves[i].first;
                 int endy = startPiece.possibleMoves[i].second;
@@ -422,7 +422,7 @@ class Board{
                 bool bid = false;//Black in danger
                 vector<vector<Piece*>> testSquares = squares;//Simulating the board if this piece moves
                 testSquares.at(endx).at(endy) = &startPiece;
-                testSquares.at(startx).at(starty) = &Piece(startx, starty);
+                testSquares.at(startx).at(starty) =  new Piece(startx, starty);
                 if(testSquares.at(whiteKing.first).at(whiteKing.second)->pieceType == "king"){
                     king* wk = dynamic_cast<king*>(testSquares.at(whiteKing.first).at(whiteKing.second));
                     if(wk->inDanger(squares, wk->currPos[0], wk->currPos[1])) wid = true;
@@ -441,23 +441,70 @@ class Board{
         Piece move(int endx, int endy){
             if(find(possibleMoves.begin(), possibleMoves.end(), make_pair(endx, endy)) != possibleMoves.end()){
                 Piece taken = *squares.at(endx).at(endy);
-                squares.at(currSelected->currPos[0]).at(currSelected->currPos[1]) = &Piece(currSelected->currPos[0], currSelected->currPos[1]);
+                squares.at(currSelected->currPos[0]).at(currSelected->currPos[1]) = new Piece(currSelected->currPos[0], currSelected->currPos[1]);
                 squares.at(endx).at(endy) = currSelected;
+                squares.at(endx).at(endy)->currPos[0] = endx;
+                squares.at(endx).at(endy)->currPos[1] = endy;
                 return taken;
             }return Piece();
         }
         Board(){
+            whiteKing = make_pair(3, 7);
+            blackKing = make_pair(3, 0);
+            squares = vector<vector<Piece*>>(8, vector<Piece*>(8, nullptr));
             for(int i = 0; i < 8; i++){//Up down
                 for(int j = 0; j < 8; j++){//Left right
+                    //Default blank spots are BLANK
                     string color = "BLANK";
                     string pieceType = "BLANK";
+
                     if(i < 2) color = "black";
-                    if(i > 5) color = "white";
+                    else if(i > 5) color = "white";
+
+                    if(j == 0 || j == 7) pieceType = "rook";
+                    else if(j == 1 || j == 6) pieceType = "knight";
+                    else if(j == 2 || j == 5) pieceType = "bishop";
+                    else if(j == 3) pieceType = "queen";
+                    else pieceType = "king";
                     if(i == 1 || i == 6) pieceType = "pawn";
-                    if((i == 0 || i == 7) && (j == 0 || j == 7)) pieceType = "rook";
-                    
+
+                    //wanted to use switch case but it does not work with strings in c++
+                    if(color != "BLANK"){
+                        if(pieceType == "king"){
+                            Piece* newPiece =  new king(j, i, color);
+                            squares.at(i).at(j) = (newPiece);
+                        }else if(pieceType == "queen"){
+                            Piece* newPiece = new queen(j, i, color);
+                            squares.at(i).at(j) = (newPiece);
+                        }else if(pieceType == "knight"){
+                            Piece* newPiece = new knight(j, i, color);
+                            squares.at(i).at(j) = (newPiece);
+                        }else if(pieceType == "bishop"){
+                            Piece* newPiece = new bishop(j, i, color);
+                            squares.at(i).at(j) = (newPiece);
+                        }else if(pieceType == "rook"){
+                            Piece* newPiece = new rook(j, i, color);
+                            squares.at(i).at(j) = (newPiece);
+                        }else{
+                            Piece* newPiece = new pawn(j, i, color);
+                            squares.at(i).at(j) = (newPiece);
+                        }
+                    }else{
+                        Piece* newPiece = new Piece(j, i);
+                        squares.at(i).at(j) = (newPiece);
+                    }
                 }
             }
+        }
+        void printBoard(){
+            string board = "";
+            for(int i = 0; i < 8; i++){
+                for(int j = 0; j < 8; j++){
+                    if(j < 7) board = (board + squares.at(i).at(j)->pieceType[0] + "\t");
+                    else board = (board + squares.at(i).at(j)->pieceType[0] + "\n");
+                }
+            }
+            printf("%s", board.c_str());
         }
 };
 
