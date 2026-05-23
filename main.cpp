@@ -1,29 +1,45 @@
 #include "raylib.h"
 #include "board.cpp"
 
-int DrawBoard();
-int updateBoard(vector<vector<Piece*>> squares);
+int DrawBoard(vector<pair<int, int>>);
+int updateBoard(vector<vector<Piece*>>);
 
 int main() {
     Board newBoard = Board();
     newBoard.printBoard();
     InitWindow(800, 800, "raylib mac test");
     SetTargetFPS(30);
-    
+    Vector2 selectedSquare;
+    bool waitingForInput = true;
+    bool whiteTurn = true;//True is whites turn, false is black's turn
+    int coordx;
+    int coordy;
 
     while (!WindowShouldClose()) {
+        if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
+            selectedSquare = GetMousePosition();
+            coordx = static_cast<int>(selectedSquare.x/100);
+            coordy = static_cast<int>(selectedSquare.y/100);
+            if(coordx >= 0 && coordy >= 0){
+                printf("x: %d, y: %d\n\n", coordx, coordy);
+                newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
+                newBoard.legalMoves();
+            }
+        }
         BeginDrawing();
-        DrawBoard();
+        DrawBoard(newBoard.possibleMoves);
         ClearBackground(RAYWHITE);     
         updateBoard(newBoard.squares);
         EndDrawing();
     }
 
+    
+
     CloseWindow();
     return 0;
 }
 
-int DrawBoard(){
+int DrawBoard(vector<pair<int, int>> possibleMoves){
     bool slot = true;
     for(int i = 0; i < 8; i++){
         for(int j = 0; j < 8; j++){
@@ -32,6 +48,11 @@ int DrawBoard(){
             slot = !slot;
         }
         slot = !slot;
+    }
+    if(possibleMoves.size() > 0){
+        for(int i = 0; i < possibleMoves.size(); i++){
+            DrawRectangle(10 + (possibleMoves[i].first * 100), 10 + (possibleMoves[i].second * 100), 80, 80, RED);
+        }
     }
     return 0;
 }

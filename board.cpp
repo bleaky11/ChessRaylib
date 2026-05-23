@@ -2,6 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
@@ -44,23 +45,31 @@ class Piece{
 
 class pawn: public Piece{//Add enpassant and promotion
     public:
+        bool moved = false;
         /**Check later on if enemy piece exists diagonally to filter out diagonal moves */
         void calcMovement(vector<vector<Piece*>> boardState) override{
             int movement;
-            if(this->color == "White"){
+            if(this->color == "white"){
                 movement = -1;
-            }if(this->color == "Black"){
+            }if(this->color == "black"){
                 movement = 1;
             }if(this->currPos[1]+movement >= 0 && this->currPos[1]+movement < 8){
-                possibleMoves.push_back({this->currPos[0], this->currPos[1]+movement});
+                if(boardState.at(this->currPos[1]+movement).at(this->currPos[0])->pieceType == "BLANK"){
+                    possibleMoves.push_back({this->currPos[0], this->currPos[1]+movement});
+
+                    if(this->currPos[1]+movement+movement >= 0 && this->currPos[1]+movement+movement < 8 && 
+                        boardState.at(this->currPos[1]+movement+movement).at(this->currPos[0])->pieceType == "BLANK"){
+                        possibleMoves.push_back({this->currPos[0], this->currPos[1]+movement+movement});
+                    }
+                }
                 if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8 &&
-                boardState.at(this->currPos[0]).at(this->currPos[1]+movement)->color != this->color &&
-                boardState.at(this->currPos[0]).at(this->currPos[1]+movement)->pieceType != "BLANK")//If piece exists and is enemy
-                    possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]+movement});
+                boardState.at(this->currPos[1]+movement).at(this->currPos[0]+1)->color != this->color &&
+                boardState.at(this->currPos[1]+movement).at(this->currPos[0]+1)->pieceType != "BLANK")//If piece exists and is enemy
+                    possibleMoves.push_back({this->currPos[0]+1, this->currPos[0]+movement});
                 if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8&&
-                boardState.at(this->currPos[0]).at(this->currPos[1]+movement)->color != this->color &&
-                boardState.at(this->currPos[0]).at(this->currPos[1]+movement)->pieceType != "BLANK")
-                    possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]+movement});
+                boardState.at(this->currPos[1]+movement).at(this->currPos[0]-1)->color != this->color &&
+                boardState.at(this->currPos[1]+movement).at(this->currPos[0]-1)->pieceType != "BLANK")
+                    possibleMoves.push_back({this->currPos[0]-1, this->currPos[0]+movement});
             }
             //Add a check for enpassant later
         }
@@ -70,11 +79,13 @@ class pawn: public Piece{//Add enpassant and promotion
 class king: public Piece{
     public:
         void calcMovement(vector<vector<Piece*>> boardState) override{
-            for(int horizonal = -1; horizonal <= 1; horizonal++){
+            for(int horizontal = -1; horizontal <= 1; horizontal++){
                 for(int vertical = 1; vertical <= 1; vertical++){
-                    if(horizonal != 0 && vertical != 0){
-                        if(boardState.at(this->currPos[0]+(horizonal)).at(this->currPos[1]+(vertical))->color != this->color)
-                            possibleMoves.push_back({this->currPos[0]+(horizonal), this->currPos[1]+(vertical)});
+                    if(horizontal != 0 && vertical != 0){
+                        if(this->currPos[0]+horizontal >= 0 && this->currPos[0]+horizontal < 8 &&
+                            this->currPos[1]+vertical >= 0 && this->currPos[1]+vertical < 8 &&
+                            boardState.at(this->currPos[1]+(vertical)).at(this->currPos[0]+(horizontal))->color != this->color)
+                            possibleMoves.push_back({this->currPos[0]+(horizontal), this->currPos[1]+(vertical)});
                     }
                 }   
             }
@@ -158,41 +169,41 @@ class bishop: public Piece{
             bool posneg = true;
             bool negpos = true;
             bool negneg = true;
-            for(int i = 0; i < 8; i++){
+            for(int i = 1; i < 8; i++){
                 bool atLeastOne = false;//Using this to break out if none of the directions work anymore(piece in middle of board)
                 if(pospos && this->currPos[0]+i < 8 && this->currPos[0]+i >= 0 && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
-                    if(boardState.at(this->currPos[0]+i).at(this->currPos[1]+i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]+i).at(this->currPos[0]+i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]+i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]+i).at(this->currPos[1]+i)->color != this->color){
+                        if(boardState.at(this->currPos[1]+i).at(this->currPos[0]+i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]+i});
                         }pospos = false;
                     }
                 }if(posneg && this->currPos[0]+i < 8 && this->currPos[0]+i >= 0 && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
-                    if(boardState.at(this->currPos[0]+i).at(this->currPos[1]-i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]-i).at(this->currPos[0]+i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]-i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]+i).at(this->currPos[1]-i)->color != this->color){
+                        if(boardState.at(this->currPos[1]-i).at(this->currPos[0]+i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]-i});
                         }posneg = false;
                     }
                 }if(negpos && this->currPos[0]-i < 8 && this->currPos[0]-i >= 0 && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
-                    if(boardState.at(this->currPos[0]-i).at(this->currPos[1]+i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]+i).at(this->currPos[0]-i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]+i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]-i).at(this->currPos[1]+i)->color != this->color){
+                        if(boardState.at(this->currPos[1]+i).at(this->currPos[0]-i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]+i});
                         }negpos = false;
                     }
                 }if(negneg && this->currPos[0]-i < 8 && this->currPos[0]-i >= 0 && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
-                    if(boardState.at(this->currPos[0]-i).at(this->currPos[1]-i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]-i).at(this->currPos[0]-i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]-i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]-i).at(this->currPos[1]-i)->color != this->color){
+                        if(boardState.at(this->currPos[1]-i).at(this->currPos[0]-i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]-i});
                         }negneg = false;
                     }
@@ -211,41 +222,41 @@ class rook: public Piece{
             bool right = true;
             bool down = true;
             bool left = true;
-            for(int i = 0; i < 8; i++){
+            for(int i = 1; i < 8; i++){
                 bool atLeastOne = false;//Using this to break out if none of the directions work anymore(piece in middle of board)
                 if(right && this->currPos[0]+i < 8 && this->currPos[0]+i >= 0){
-                    if(boardState.at(this->currPos[0]+i).at(this->currPos[1])->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]).at(this->currPos[0]+i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]+i).at(this->currPos[1])->color != this->color){
+                        if(boardState.at(this->currPos[1]).at(this->currPos[0]+i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]});
                         }right=false;
                     }
                 }if(down && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
-                    if(boardState.at(this->currPos[0]).at(this->currPos[1]+i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]+i).at(this->currPos[0])->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0], this->currPos[1]+i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]).at(this->currPos[1]+i)->color != this->color){
+                        if(boardState.at(this->currPos[1]+i).at(this->currPos[0])->color != this->color){
                             possibleMoves.push_back({this->currPos[0], this->currPos[1]+i});
                         }down=false;
                     }
                 }if(left && this->currPos[0]-i < 8 && this->currPos[0]-i >= 0){
-                    if(boardState.at(this->currPos[0]-i).at(this->currPos[1])->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]).at(this->currPos[0]-i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]-i).at(this->currPos[1])->color != this->color){
+                        if(boardState.at(this->currPos[1]).at(this->currPos[0]-i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]});
                         }left=false;
                     }
-                }if(this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
-                    if(boardState.at(this->currPos[0]).at(this->currPos[1]-i)->pieceType == "BLANK"){
+                }if(up && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
+                    if(boardState.at(this->currPos[1]-i).at(this->currPos[0])->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0], this->currPos[1]-i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]).at(this->currPos[1]-i)->color != this->color){
+                        if(boardState.at(this->currPos[1]-i).at(this->currPos[0])->color != this->color){
                             possibleMoves.push_back({this->currPos[0], this->currPos[1]-i});
                         }up=false;
                     }
@@ -268,77 +279,77 @@ class queen: public Piece{
             bool right = true;
             bool down = true;
             bool left = true;
-            for(int i = 0; i < 8; i++){
+            for(int i = 1; i < 8; i++){
                 bool atLeastOne = false;//Using this to break out if none of the directions work anymore(piece in middle of board)
                 if(pospos && this->currPos[0]+i < 8 && this->currPos[0]+i >= 0 && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
-                    if(boardState.at(this->currPos[0]+i).at(this->currPos[1]+i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]+i).at(this->currPos[0]+i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]+i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]+i).at(this->currPos[1]+i)->color != this->color){
+                        if(boardState.at(this->currPos[1]+i).at(this->currPos[0]+i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]+i});
                         }pospos = false;
                     }
                 }if(posneg && this->currPos[0]+i < 8 && this->currPos[0]+i >= 0 && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
-                    if(boardState.at(this->currPos[0]+i).at(this->currPos[1]-i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]-i).at(this->currPos[0]+i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]-i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]+i).at(this->currPos[1]-i)->color != this->color){
+                        if(boardState.at(this->currPos[1]-i).at(this->currPos[0]+i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]-i});
                         }posneg = false;
                     }
                 }if(negpos && this->currPos[0]-i < 8 && this->currPos[0]-i >= 0 && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
-                    if(boardState.at(this->currPos[0]-i).at(this->currPos[1]+i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]+i).at(this->currPos[0]-i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]+i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]-i).at(this->currPos[1]+i)->color != this->color){
+                        if(boardState.at(this->currPos[1]+i).at(this->currPos[0]-i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]+i});
                         }negpos = false;
                     }
                 }if(negneg && this->currPos[0]-i < 8 && this->currPos[0]-i >= 0 && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
-                    if(boardState.at(this->currPos[0]-i).at(this->currPos[1]-i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]-i).at(this->currPos[0]-i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]-i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]-i).at(this->currPos[1]-i)->color != this->color){
+                        if(boardState.at(this->currPos[1]-i).at(this->currPos[0]-i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]-i});
                         }negneg = false;
                     }
                 }if(right && this->currPos[0]+i < 8 && this->currPos[0]+i >= 0){
-                    if(boardState.at(this->currPos[0]+i).at(this->currPos[1])->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]).at(this->currPos[0]+i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]+i).at(this->currPos[1])->color != this->color){
+                        if(boardState.at(this->currPos[1]).at(this->currPos[0]+i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]+i, this->currPos[1]});
                         }right=false;
                     }
                 }if(down && this->currPos[1]+i < 8 && this->currPos[1]+i >= 0){
-                    if(boardState.at(this->currPos[0]).at(this->currPos[1]+i)->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]+i).at(this->currPos[0])->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0], this->currPos[1]+i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]).at(this->currPos[1]+i)->color != this->color){
+                        if(boardState.at(this->currPos[1]+i).at(this->currPos[0])->color != this->color){
                             possibleMoves.push_back({this->currPos[0], this->currPos[1]+i});
                         }down=false;
                     }
                 }if(left && this->currPos[0]-i < 8 && this->currPos[0]-i >= 0){
-                    if(boardState.at(this->currPos[0]-i).at(this->currPos[1])->pieceType == "BLANK"){
+                    if(boardState.at(this->currPos[1]).at(this->currPos[0]-i)->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]-i).at(this->currPos[1])->color != this->color){
+                        if(boardState.at(this->currPos[1]).at(this->currPos[0]-i)->color != this->color){
                             possibleMoves.push_back({this->currPos[0]-i, this->currPos[1]});
                         }left=false;
                     }
-                }if(this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
-                    if(boardState.at(this->currPos[0]).at(this->currPos[1]-i)->pieceType == "BLANK"){
+                }if(up && this->currPos[1]-i < 8 && this->currPos[1]-i >= 0){
+                    if(boardState.at(this->currPos[1]-i).at(this->currPos[0])->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0], this->currPos[1]-i});
                         atLeastOne = true;
                     }else{
-                        if(boardState.at(this->currPos[0]).at(this->currPos[1]-i)->color != this->color){
+                        if(boardState.at(this->currPos[1]-i).at(this->currPos[0])->color != this->color){
                             possibleMoves.push_back({this->currPos[0], this->currPos[1]-i});
                         }up=false;
                     }
@@ -354,28 +365,28 @@ class knight: public Piece{
     public:
         void calcMovement(vector<vector<Piece*>> boardState){
             if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8 && this->currPos[1]+2 >= 0 && this->currPos[1]+2 < 8 &&
-            boardState.at(this->currPos[0]+1).at(this->currPos[1]+2)->color != this->color){
+            boardState.at(this->currPos[1]+2).at(this->currPos[0]+1)->color != this->color){
                 possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]+2});
             }if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8 && this->currPos[1]-2 >= 0 && this->currPos[1]-2 < 8 &&
-            boardState.at(this->currPos[0]-1).at(this->currPos[1]-2)->color != this->color){
+            boardState.at(this->currPos[1]-2).at(this->currPos[0]-1)->color != this->color){
                 possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]-2});
             }if(this->currPos[0]+2 >= 0 && this->currPos[0]+2 < 8 && this->currPos[1]+1 >= 0 && this->currPos[1]+1 < 8 &&
-            boardState.at(this->currPos[0]+2).at(this->currPos[1]+1)->color != this->color){
+            boardState.at(this->currPos[1]+1).at(this->currPos[0]+2)->color != this->color){
                 possibleMoves.push_back({this->currPos[0]+2, this->currPos[1]+1});
             }if(this->currPos[0]-2 >= 0 && this->currPos[0]-2 < 8 && this->currPos[1]-1 >= 0 && this->currPos[1]-1 < 8 &&
-            boardState.at(this->currPos[0]-2).at(this->currPos[1]-1)->color != this->color){
+            boardState.at(this->currPos[1]-1).at(this->currPos[0]-2)->color != this->color){
                 possibleMoves.push_back({this->currPos[0]-2, this->currPos[1]-1});
             }if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8 && this->currPos[1]-2 >= 0 && this->currPos[1]-2 < 8 &&
-            boardState.at(this->currPos[0]+1).at(this->currPos[1]-2)->color != this->color){
+            boardState.at(this->currPos[1]-2).at(this->currPos[0]+1)->color != this->color){
                 possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]-2});
             }if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8 && this->currPos[1]+2 >= 0 && this->currPos[1]+2 < 8 &&
-            boardState.at(this->currPos[0]-1).at(this->currPos[1]+2)->color != this->color){
+            boardState.at(this->currPos[1]+2).at(this->currPos[0]-1)->color != this->color){
                 possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]+2});
             }if(this->currPos[0]+2 >= 0 && this->currPos[0]+2 < 8 && this->currPos[1]-1 >= 0 && this->currPos[1]-1 < 8 &&
-            boardState.at(this->currPos[0]+2).at(this->currPos[1]-1)->color != this->color){
+            boardState.at(this->currPos[1]-1).at(this->currPos[0]+2)->color != this->color){
                 possibleMoves.push_back({this->currPos[0]+2, this->currPos[1]-1});
             }if(this->currPos[0]-2 >= 0 && this->currPos[0]-2 < 8 && this->currPos[1]+1 >= 0 && this->currPos[1]+1 < 8 &&
-            boardState.at(this->currPos[0]-2).at(this->currPos[1]+1)->color != this->color){
+            boardState.at(this->currPos[1]+1).at(this->currPos[0]-2)->color != this->color){
                 possibleMoves.push_back({this->currPos[0]-2, this->currPos[1]+1});
             }
         }
@@ -393,9 +404,13 @@ class Board{
     public:
         pair<int, int> whiteKing;
         pair<int, int> blackKing;
+        /**
+         * squares.at(vertical).at(horizontal)
+         */
         vector<vector<Piece*>> squares;
         /**
          * All possible moves that can be made by currSelected
+         * Set by legalMoves()
          */
         vector<pair<int, int>> possibleMoves;
         /**
@@ -411,27 +426,27 @@ class Board{
          * 
          */
         void legalMoves(){
-            Piece startPiece = *currSelected;
+            this->possibleMoves.clear();
             int startx = currSelected->currPos[0];
             int starty = currSelected->currPos[1];
-            startPiece.calcMovement(squares);//Using pointers, so I might not need to dynamic cast
-            for(int i = 0; i < startPiece.possibleMoves.size(); i++){
-                int endx = startPiece.possibleMoves[i].first;
-                int endy = startPiece.possibleMoves[i].second;
+            currSelected->calcMovement(squares);//Using pointers, so I might not need to dynamic cast
+            for(int i = 0; i < currSelected->possibleMoves.size(); i++){
+                int endx = currSelected->possibleMoves[i].first;
+                int endy = currSelected->possibleMoves[i].second;
                 bool wid = false;//White in danger
                 bool bid = false;//Black in danger
                 vector<vector<Piece*>> testSquares = squares;//Simulating the board if this piece moves
-                testSquares.at(endx).at(endy) = &startPiece;
-                testSquares.at(startx).at(starty) =  new Piece(startx, starty);
-                if(testSquares.at(whiteKing.first).at(whiteKing.second)->pieceType == "king"){
-                    king* wk = dynamic_cast<king*>(testSquares.at(whiteKing.first).at(whiteKing.second));
+                testSquares.at(endy).at(endx) = currSelected;
+                testSquares.at(starty).at(startx) =  new Piece(startx, starty);
+                if(testSquares.at(whiteKing.second).at(whiteKing.first)->pieceType == "king"){
+                    king* wk = dynamic_cast<king*>(testSquares.at(whiteKing.second).at(whiteKing.first));
                     if(wk->inDanger(squares, wk->currPos[0], wk->currPos[1])) wid = true;
                 }if(testSquares.at(blackKing.first).at(blackKing.second)->pieceType == "king"){
                     king* bk = dynamic_cast<king*>(testSquares.at(blackKing.first).at(blackKing.second));
                     if(bk->inDanger(squares, bk->currPos[0], bk->currPos[1])) bid = true;
-                }if(startPiece.color == "white" && wid){
+                }if(currSelected->color == "white" && wid){
                     continue;
-                }else if(startPiece.color == "black" && bid){
+                }else if(currSelected->color == "black" && bid){
                     continue;
                 }else{
                     this->possibleMoves.push_back(make_pair(endx, endy));
@@ -440,11 +455,11 @@ class Board{
         };
         Piece move(int endx, int endy){
             if(find(possibleMoves.begin(), possibleMoves.end(), make_pair(endx, endy)) != possibleMoves.end()){
-                Piece taken = *squares.at(endx).at(endy);
-                squares.at(currSelected->currPos[0]).at(currSelected->currPos[1]) = new Piece(currSelected->currPos[0], currSelected->currPos[1]);
-                squares.at(endx).at(endy) = currSelected;
-                squares.at(endx).at(endy)->currPos[0] = endx;
-                squares.at(endx).at(endy)->currPos[1] = endy;
+                Piece taken = *squares.at(endy).at(endx);
+                squares.at(currSelected->currPos[1]).at(currSelected->currPos[0]) = new Piece(currSelected->currPos[0], currSelected->currPos[1]);
+                squares.at(endy).at(endx) = currSelected;
+                squares.at(endy).at(endx)->currPos[0] = endx;
+                squares.at(endy).at(endx)->currPos[1] = endy;
                 return taken;
             }return Piece();
         }
