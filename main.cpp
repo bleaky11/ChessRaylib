@@ -21,9 +21,22 @@ int main() {
             coordx = static_cast<int>(selectedSquare.x/100);
             coordy = static_cast<int>(selectedSquare.y/100);
             if(coordx >= 0 && coordy >= 0){
-                printf("x: %d, y: %d\n\n", coordx, coordy);
-                newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
-                newBoard.legalMoves();
+                //Attempts to move piece if possible first
+                if(newBoard.move(coordx, coordy) == -1){
+                    if(whiteTurn){
+                        if(newBoard.squares.at(coordy).at(coordx)->color != "black"){
+                            newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
+                        }else newBoard.currSelected = new Piece();
+                    }else{
+                        if(newBoard.squares.at(coordy).at(coordx)->color != "white"){
+                            newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
+                        }else newBoard.currSelected = new Piece();
+                    }
+                    newBoard.legalMoves();
+                } else{
+                    newBoard.currSelected = new Piece();
+                    whiteTurn = !whiteTurn;
+                }
             }
         }
         BeginDrawing();
@@ -68,31 +81,31 @@ int updateBoard(vector<vector<Piece*>> squares){
         for(int j = 0; j < 8; j++){
             if(squares.at(i).at(j)->color == "black"){
                 if(squares.at(i).at(j)->pieceType == "pawn"){
-                    DrawTexture(Pawn, 710 - (j * 100), 10 + (i * 100), BLACK);
+                    DrawTexture(Pawn, 10 +  (j * 100), 10 + (i * 100), BLACK);
                 }else if(squares.at(i).at(j)->pieceType == "bishop"){
-                    DrawTexture(Bishop, 710 - (j * 100), 10 + (i * 100), BLACK);
+                    DrawTexture(Bishop, 10 +  (j * 100), 10 + (i * 100), BLACK);
                 }else if(squares.at(i).at(j)->pieceType == "queen"){
-                    DrawTexture(Queen, 710 - (j * 100), 10 + (i * 100), BLACK);
+                    DrawTexture(Queen, 10 +  (j * 100), 10 + (i * 100), BLACK);
                 }else if(squares.at(i).at(j)->pieceType == "king"){
-                    DrawTexture(King, 710 - (j * 100), 10 + (i * 100), BLACK);
+                    DrawTexture(King, 10 +  (j * 100), 10 + (i * 100), BLACK);
                 }else if(squares.at(i).at(j)->pieceType == "knight"){
-                    DrawTexture(Knight, 710 - (j * 100), 10 + (i * 100), BLACK);
+                    DrawTexture(Knight, 10 +  (j * 100), 10 + (i * 100), BLACK);
                 }else if(squares.at(i).at(j)->pieceType == "rook"){
-                    DrawTexture(Rook, 710 - (j * 100), 10 + (i * 100), BLACK);
+                    DrawTexture(Rook, 10 +  (j * 100), 10 + (i * 100), BLACK);
                 }
             }else if(squares.at(i).at(j)->color == "white"){
                 if(squares.at(i).at(j)->pieceType == "pawn"){
-                    DrawTexture(Pawn, 710 - (j * 100), 10 + (i * 100), BEIGE);
+                    DrawTexture(Pawn, 10 +  (j * 100), 10 + (i * 100), BEIGE);
                 }else if(squares.at(i).at(j)->pieceType == "bishop"){
-                    DrawTexture(Bishop, 710 - (j * 100), 10 + (i * 100), BEIGE);
+                    DrawTexture(Bishop, 10 +  (j * 100), 10 + (i * 100), BEIGE);
                 }else if(squares.at(i).at(j)->pieceType == "queen"){
-                    DrawTexture(Queen, 710 - (j * 100), 10 + (i * 100), BEIGE);
+                    DrawTexture(Queen, 10 +  (j * 100), 10 + (i * 100), BEIGE);
                 }else if(squares.at(i).at(j)->pieceType == "king"){
-                    DrawTexture(King, 710 - (j * 100), 10 + (i * 100), BEIGE);
+                    DrawTexture(King, 10 +  (j * 100), 10 + (i * 100), BEIGE);
                 }else if(squares.at(i).at(j)->pieceType == "knight"){
-                    DrawTexture(Knight, 710 - (j * 100), 10 + (i * 100), BEIGE);
+                    DrawTexture(Knight, 10 +  (j * 100), 10 + (i * 100), BEIGE);
                 }else if(squares.at(i).at(j)->pieceType == "rook"){
-                    DrawTexture(Rook, 710 - (j * 100), 10 + (i * 100), BEIGE);
+                    DrawTexture(Rook, 10 +  (j * 100), 10 + (i * 100), BEIGE);
                 }
             }
         }

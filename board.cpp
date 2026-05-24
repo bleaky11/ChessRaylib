@@ -25,9 +25,10 @@ class Piece{
          * 
          * Check isLegalMove later on to eliminate moves blocked by pieces, or if move endangers own king
          */
-        virtual void calcMovement(vector<vector<Piece*>> boardState){}
+        virtual void calcMovement(vector<vector<Piece*>>& boardState){}
         vector<pair<int, int>> possibleMoves;
         string pieceType;
+        int points = 0;
         Piece()
             : color("BLANK"),
             currPos{-1, 1},
@@ -37,9 +38,10 @@ class Piece{
             currPos[0] = x;
             currPos[1] = y;
         }
-        Piece(int x, int y, string inColor, string inPieceType) : Piece(x, y){
+        Piece(int x, int y, string inColor, string inPieceType, int numpoints) : Piece(x, y){
             color = inColor;
             pieceType = inPieceType;
+            points = numpoints;
         }
 };
 
@@ -47,7 +49,8 @@ class pawn: public Piece{//Add enpassant and promotion
     public:
         bool moved = false;
         /**Check later on if enemy piece exists diagonally to filter out diagonal moves */
-        void calcMovement(vector<vector<Piece*>> boardState) override{
+        void calcMovement(vector<vector<Piece*>>& boardState) override{
+            possibleMoves.clear();
             int movement;
             if(this->color == "white"){
                 movement = -1;
@@ -73,12 +76,13 @@ class pawn: public Piece{//Add enpassant and promotion
             }
             //Add a check for enpassant later
         }
-        pawn(int posx, int posy, string color): Piece(posx, posy, color, "pawn"){}
+        pawn(int posx, int posy, string color): Piece(posx, posy, color, "pawn", 1){}
 };
 
 class king: public Piece{
     public:
-        void calcMovement(vector<vector<Piece*>> boardState) override{
+        void calcMovement(vector<vector<Piece*>>& boardState) override{
+            possibleMoves.clear();
             for(int horizontal = -1; horizontal <= 1; horizontal++){
                 for(int vertical = 1; vertical <= 1; vertical++){
                     if(horizontal != 0 && vertical != 0){
@@ -96,7 +100,7 @@ class king: public Piece{
          * moveX: positive or negative X movement
          * moveY: positive or negative y movement
          */
-        bool boardCheck(vector<vector<Piece*>> boardState, int posX, int posY, int moveX, int moveY){
+        bool boardCheck(vector<vector<Piece*>>& boardState, int posX, int posY, int moveX, int moveY){
             int tempX = posX;
             int tempY = posY;
             for(int i = 0; i < 8; i++){//Cut off early if encounters edge of board or other pieces
@@ -122,7 +126,7 @@ class king: public Piece{
                 }
             }
             return false;
-        }bool knightCheck(vector<vector<Piece*>> boardState, int posX, int posY){
+        }bool knightCheck(vector<vector<Piece*>>& boardState, int posX, int posY){
             if(boardState.at(posX + 2).at(posY + 1)->pieceType == "knight"){
                 return true;
             }else if(boardState.at(posX + 1).at(posY + 2)->pieceType == "knight"){
@@ -141,7 +145,7 @@ class king: public Piece{
                 return true;
             }return false;
         }
-        bool inDanger(vector<vector<Piece*>> boardState, int posX, int posY){
+        bool inDanger(vector<vector<Piece*>>& boardState, int posX, int posY){
             //To know which direction enemy pawns attack from 
             //White is negative because black pawns attack from above, going positive means down
             //from king it would mean black pawn is above you, which means negative y direction
@@ -159,12 +163,13 @@ class king: public Piece{
             }
         return false;
         }
-        king(int posx, int posy, string color): Piece(posx, posy, color, "king"){}
+        king(int posx, int posy, string color): Piece(posx, posy, color, "king", 0){}
         
 };
 class bishop: public Piece{
     public:
-        void calcMovement(vector<vector<Piece*>> boardState) override{
+        void calcMovement(vector<vector<Piece*>>& boardState) override{
+            possibleMoves.clear();
             bool pospos = true;
             bool posneg = true;
             bool negpos = true;
@@ -212,12 +217,13 @@ class bishop: public Piece{
                 }
             }
         }
-        bishop(int posx, int posy, string color): Piece(posx, posy, color, "bishop"){}
+        bishop(int posx, int posy, string color): Piece(posx, posy, color, "bishop", 3){}
 };
 
 class rook: public Piece{
     public:
-        void calcMovement(vector<vector<Piece*>> boardState){
+        void calcMovement(vector<vector<Piece*>> &boardState){
+            possibleMoves.clear();
             bool up = true;
             bool right = true;
             bool down = true;
@@ -265,12 +271,13 @@ class rook: public Piece{
                 }
             }
         }
-        rook(int posx, int posy, string color): Piece(posx, posy, color, "rook"){}
+        rook(int posx, int posy, string color): Piece(posx, posy, color, "rook", 5){}
 };
 
 class queen: public Piece{
     public:
-        void calcMovement(vector<vector<Piece*>> boardState){
+        void calcMovement(vector<vector<Piece*>>& boardState){
+            possibleMoves.clear();
             bool pospos = true;
             bool posneg = true;
             bool negpos = true;
@@ -358,39 +365,33 @@ class queen: public Piece{
                 }
             }
         }
-        queen(int posx, int posy, string color): Piece(posx, posy, color, "queen"){}
+        queen(int posx, int posy, string color): Piece(posx, posy, color, "queen", 9){}
 };
 
 class knight: public Piece{
     public:
-        void calcMovement(vector<vector<Piece*>> boardState){
-            if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8 && this->currPos[1]+2 >= 0 && this->currPos[1]+2 < 8 &&
-            boardState.at(this->currPos[1]+2).at(this->currPos[0]+1)->color != this->color){
-                possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]+2});
-            }if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8 && this->currPos[1]-2 >= 0 && this->currPos[1]-2 < 8 &&
-            boardState.at(this->currPos[1]-2).at(this->currPos[0]-1)->color != this->color){
-                possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]-2});
-            }if(this->currPos[0]+2 >= 0 && this->currPos[0]+2 < 8 && this->currPos[1]+1 >= 0 && this->currPos[1]+1 < 8 &&
-            boardState.at(this->currPos[1]+1).at(this->currPos[0]+2)->color != this->color){
-                possibleMoves.push_back({this->currPos[0]+2, this->currPos[1]+1});
-            }if(this->currPos[0]-2 >= 0 && this->currPos[0]-2 < 8 && this->currPos[1]-1 >= 0 && this->currPos[1]-1 < 8 &&
-            boardState.at(this->currPos[1]-1).at(this->currPos[0]-2)->color != this->color){
-                possibleMoves.push_back({this->currPos[0]-2, this->currPos[1]-1});
-            }if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8 && this->currPos[1]-2 >= 0 && this->currPos[1]-2 < 8 &&
-            boardState.at(this->currPos[1]-2).at(this->currPos[0]+1)->color != this->color){
-                possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]-2});
-            }if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8 && this->currPos[1]+2 >= 0 && this->currPos[1]+2 < 8 &&
-            boardState.at(this->currPos[1]+2).at(this->currPos[0]-1)->color != this->color){
-                possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]+2});
-            }if(this->currPos[0]+2 >= 0 && this->currPos[0]+2 < 8 && this->currPos[1]-1 >= 0 && this->currPos[1]-1 < 8 &&
-            boardState.at(this->currPos[1]-1).at(this->currPos[0]+2)->color != this->color){
-                possibleMoves.push_back({this->currPos[0]+2, this->currPos[1]-1});
-            }if(this->currPos[0]-2 >= 0 && this->currPos[0]-2 < 8 && this->currPos[1]+1 >= 0 && this->currPos[1]+1 < 8 &&
-            boardState.at(this->currPos[1]+1).at(this->currPos[0]-2)->color != this->color){
-                possibleMoves.push_back({this->currPos[0]-2, this->currPos[1]+1});
+        void calcMovement(vector<vector<Piece*>>& boardState){
+            possibleMoves.clear();
+            int coordsToCheck[8][2] = {
+                { 1,  2},
+                { 1, -2},
+                {-1,  2},
+                {-1, -2},
+                { 2,  1},
+                { 2, -1},
+                {-2,  1},
+                {-2, -1}
+            };//A list of all the spots the knight can move
+
+            for(int i = 0; i < 8; i++){
+                if(this->currPos[0]+coordsToCheck[i][0] >= 0 && this->currPos[0]+coordsToCheck[i][0] < 8 &&
+                this->currPos[1]+coordsToCheck[i][1] >= 0 && this->currPos[1]+coordsToCheck[i][1] < 8 &&
+                boardState.at(this->currPos[1]+coordsToCheck[i][1]).at(this->currPos[0]+coordsToCheck[i][0])->color != this->color){
+                    possibleMoves.push_back({this->currPos[0]+coordsToCheck[i][0], this->currPos[1]+coordsToCheck[i][1]});
+                }
             }
         }
-        knight(int posx, int posy, string color): Piece(posx, posy, color, "knight"){}
+        knight(int posx, int posy, string color): Piece(posx, posy, color, "knight", 3){}
 };
 
     
@@ -429,6 +430,7 @@ class Board{
             this->possibleMoves.clear();
             int startx = currSelected->currPos[0];
             int starty = currSelected->currPos[1];
+            printf("X: %d, Y: %d\n\n", startx, starty);
             currSelected->calcMovement(squares);//Using pointers, so I might not need to dynamic cast
             for(int i = 0; i < currSelected->possibleMoves.size(); i++){
                 int endx = currSelected->possibleMoves[i].first;
@@ -453,15 +455,24 @@ class Board{
                 }
             }
         };
-        Piece move(int endx, int endy){
-            if(find(possibleMoves.begin(), possibleMoves.end(), make_pair(endx, endy)) != possibleMoves.end()){
+        /**
+         * Checks if move is possible and returns point of move if it is 
+         * 
+         * Pawn = 1 point, Bishop & Knight = 3 points, Rook = 5 points, Queen = 9 points
+         * Empty & King = 0 points
+         * 
+         * If move is not possible, returns -1
+         */
+        int move(int endx, int endy){
+            if(find(possibleMoves.begin(), possibleMoves.end(), make_pair(endx, endy)) != possibleMoves.end()){//If move is in possibleMoves
                 Piece taken = *squares.at(endy).at(endx);
                 squares.at(currSelected->currPos[1]).at(currSelected->currPos[0]) = new Piece(currSelected->currPos[0], currSelected->currPos[1]);
+                currSelected->currPos[0] = endx;
+                currSelected->currPos[1] = endy;
                 squares.at(endy).at(endx) = currSelected;
-                squares.at(endy).at(endx)->currPos[0] = endx;
-                squares.at(endy).at(endx)->currPos[1] = endy;
-                return taken;
-            }return Piece();
+                possibleMoves.clear();
+                return taken.points;
+            }return -1;
         }
         Board(){
             whiteKing = make_pair(3, 7);
