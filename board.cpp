@@ -84,8 +84,8 @@ class king: public Piece{
         void calcMovement(vector<vector<Piece*>>& boardState) override{
             possibleMoves.clear();
             for(int horizontal = -1; horizontal <= 1; horizontal++){
-                for(int vertical = 1; vertical <= 1; vertical++){
-                    if(horizontal != 0 && vertical != 0){
+                for(int vertical = -1; vertical <= 1; vertical++){
+                    if(!(horizontal == 0 && vertical == 0)){
                         if(this->currPos[0]+horizontal >= 0 && this->currPos[0]+horizontal < 8 &&
                             this->currPos[1]+vertical >= 0 && this->currPos[1]+vertical < 8 &&
                             boardState.at(this->currPos[1]+(vertical)).at(this->currPos[0]+(horizontal))->color != this->color)
@@ -105,55 +105,61 @@ class king: public Piece{
             int tempY = posY;
             for(int i = 0; i < 8; i++){//Cut off early if encounters edge of board or other pieces
                 tempX+=moveX; tempY+=moveY;
-                if(tempX >= 8 || tempY >= 8){break;}//Edge of board, check other direction
-                if(boardState.at(tempX).at(tempY)->color == this->color){break;}//Blocked by ally check other direction
-                else if(boardState.at(tempX).at(tempY)->color == "Empty"){
+                if(tempX >= 8 || tempY >= 8 || tempX < 0 || tempY < 0){
+                    break;
+                }//Edge of board, check other direction
+                if(boardState.at(tempY).at(tempX)->color == this->color){
+                    break;
+                }//Blocked by ally check other direction
+                else if(boardState.at(tempY).at(tempX)->color == "BLANK"){
                     continue;
                 }else if(abs(moveX) == abs(moveY)){//Diagonal Check
                     //PawnCheck
-                    if(boardState.at(tempX).at(tempY)->pieceType == "pawn"){
-                        if(tempY - posY == 1 && this->color == "Black" || tempY - posY == -1 && this->color == "White")
+                    if(boardState.at(tempY).at(tempX)->pieceType == "pawn"){
+                        if((tempY - posY == 1 && this->color == "black" && boardState.at(tempY).at(tempX)->color == "white") ||
+                        (tempY - posY == -1 && this->color == "white" && boardState.at(tempY).at(tempX)->color == "black")){
                             return true;
+                        }
                         else break;
                     }//Queen and bishop check
-                    else if(boardState.at(tempX).at(tempY)->pieceType == "queen" || boardState.at(tempX).at(tempY)->pieceType == "bishop"){
+                    else if(boardState.at(tempY).at(tempX)->pieceType == "queen" || boardState.at(tempY).at(tempX)->pieceType == "bishop"){
                         return true;
                     }
                 }else{//Cardinal Check
-                    if(boardState.at(tempX).at(tempY)->pieceType == "queen" || boardState.at(tempX).at(tempY)->pieceType == "rook"){
+                    if(boardState.at(tempY).at(tempX)->pieceType == "queen" || boardState.at(tempY).at(tempX)->pieceType == "rook"){
                         return true;
                     }
                 }
             }
             return false;
         }bool knightCheck(vector<vector<Piece*>>& boardState, int posX, int posY){
-            if(boardState.at(posX + 2).at(posY + 1)->pieceType == "knight"){
-                return true;
-            }else if(boardState.at(posX + 1).at(posY + 2)->pieceType == "knight"){
-                return true;
-            }else if(boardState.at(posX - 2).at(posY + 1)->pieceType == "knight"){
-                return true;
-            }else if(boardState.at(posX - 1).at(posY + 2)->pieceType == "knight"){
-                return true;
-            }else if(boardState.at(posX + 2).at(posY - 1)->pieceType == "knight"){
-                return true;
-            }else if(boardState.at(posX + 1).at(posY - 2)->pieceType == "knight"){
-                return true;
-            }else if(boardState.at(posX - 2).at(posY - 1)->pieceType == "knight"){
-                return true;
-            }else if(boardState.at(posX - 1).at(posY - 2)->pieceType == "knight"){
-                return true;
+            int coordsToCheck[8][2] = {
+                { 1,  2},
+                { 1, -2},
+                {-1,  2},
+                {-1, -2},
+                { 2,  1},
+                { 2, -1},
+                {-2,  1},
+                {-2, -1}
+            };//A list of all the spots a knight can attack from
+            for(int i = 0; i < 8 ; i++){
+                if(posX + coordsToCheck[i][0] < 8 && posX + coordsToCheck[i][0] >= 0 &&
+                    posY + coordsToCheck[i][1] < 8 && posY + coordsToCheck[i][1] >= 0 &&
+                    boardState.at(posY + coordsToCheck[i][1]).at(posX + coordsToCheck[i][0])->pieceType == "knight" &&
+                    boardState.at(posY + coordsToCheck[i][1]).at(posX + coordsToCheck[i][0])->color != this->color){
+                    return true;
+                }
             }return false;
         }
         bool inDanger(vector<vector<Piece*>>& boardState, int posX, int posY){
             //To know which direction enemy pawns attack from 
             //White is negative because black pawns attack from above, going positive means down
             //from king it would mean black pawn is above you, which means negative y direction
-            
             for(int i = 1; i >= -1; i--){
                 for(int j = 1; j >= -1; j--){
                     if(!(i == 0 && j == 0)){
-                        if(boardCheck(boardState, posX, posY, 1, 1))
+                        if(boardCheck(boardState, posX, posY, j, i))
                             return true;
                     }
                 }
@@ -430,7 +436,6 @@ class Board{
             this->possibleMoves.clear();
             int startx = currSelected->currPos[0];
             int starty = currSelected->currPos[1];
-            printf("X: %d, Y: %d\n\n", startx, starty);
             currSelected->calcMovement(squares);//Using pointers, so I might not need to dynamic cast
             for(int i = 0; i < currSelected->possibleMoves.size(); i++){
                 int endx = currSelected->possibleMoves[i].first;
@@ -440,13 +445,28 @@ class Board{
                 vector<vector<Piece*>> testSquares = squares;//Simulating the board if this piece moves
                 testSquares.at(endy).at(endx) = currSelected;
                 testSquares.at(starty).at(startx) =  new Piece(startx, starty);
+                if(this->currSelected->pieceType == "king"){//Updating king position for simulation
+                    if(this->currSelected->color == "white"){
+                        whiteKing = currSelected->possibleMoves[i];
+                    }else{
+                        blackKing = currSelected->possibleMoves[i];
+                    }
+                }
                 if(testSquares.at(whiteKing.second).at(whiteKing.first)->pieceType == "king"){
                     king* wk = dynamic_cast<king*>(testSquares.at(whiteKing.second).at(whiteKing.first));
-                    if(wk->inDanger(squares, wk->currPos[0], wk->currPos[1])) wid = true;
-                }if(testSquares.at(blackKing.first).at(blackKing.second)->pieceType == "king"){
-                    king* bk = dynamic_cast<king*>(testSquares.at(blackKing.first).at(blackKing.second));
-                    if(bk->inDanger(squares, bk->currPos[0], bk->currPos[1])) bid = true;
-                }if(currSelected->color == "white" && wid){
+                    if(wk->inDanger(testSquares, whiteKing.first, whiteKing.second)) wid = true;
+                }if(testSquares.at(blackKing.second).at(blackKing.first)->pieceType == "king"){
+                    king* bk = dynamic_cast<king*>(testSquares.at(blackKing.second).at(blackKing.first));
+                    if(bk->inDanger(testSquares, blackKing.first, blackKing.second)) bid = true;
+                }
+                if(this->currSelected->pieceType == "king"){//Returning king to proper position after simulation
+                    if(this->currSelected->color == "white"){
+                        whiteKing = make_pair(startx, starty);
+                    }else{
+                        blackKing = make_pair(startx, starty);
+                    }
+                }
+                if(currSelected->color == "white" && wid){
                     continue;
                 }else if(currSelected->color == "black" && bid){
                     continue;
@@ -464,6 +484,7 @@ class Board{
          * If move is not possible, returns -1
          */
         int move(int endx, int endy){
+            if(this->currSelected->color == "BLANK") return -1;
             if(find(possibleMoves.begin(), possibleMoves.end(), make_pair(endx, endy)) != possibleMoves.end()){//If move is in possibleMoves
                 Piece taken = *squares.at(endy).at(endx);
                 squares.at(currSelected->currPos[1]).at(currSelected->currPos[0]) = new Piece(currSelected->currPos[0], currSelected->currPos[1]);
@@ -471,12 +492,20 @@ class Board{
                 currSelected->currPos[1] = endy;
                 squares.at(endy).at(endx) = currSelected;
                 possibleMoves.clear();
+                if(currSelected->pieceType == "king"){
+                    if(this->currSelected->color == "white"){
+                        whiteKing = make_pair(endx, endy);
+                    }else 
+                        blackKing = make_pair(endx, endy);
+                }
                 return taken.points;
-            }return -1;
+            }
+            return -1;
         }
         Board(){
-            whiteKing = make_pair(3, 7);
-            blackKing = make_pair(3, 0);
+            whiteKing = make_pair(4, 7);
+            blackKing = make_pair(4, 0);
+            currSelected = new Piece();
             squares = vector<vector<Piece*>>(8, vector<Piece*>(8, nullptr));
             for(int i = 0; i < 8; i++){//Up down
                 for(int j = 0; j < 8; j++){//Left right

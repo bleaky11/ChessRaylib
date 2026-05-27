@@ -46,7 +46,10 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}",
-      "args": [],
+      "args": [
+        "-I/opt/homebrew/include", "-L/opt/homebrew/lib",  "-lraylib", "-framework OpenGL",
+          "-framework Cocoa",  "-framework IOKit",  "-framework CoreVideo"
+      ],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],

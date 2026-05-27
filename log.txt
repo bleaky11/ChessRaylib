@@ -1,0 +1,4409 @@
+r	k	b	q	k	b	k	r
+p	p	p	p	p	p	p	p
+B	B	B	B	B	B	B	B
+B	B	B	B	B	B	B	B
+B	B	B	B	B	B	B	B
+B	B	B	B	B	B	B	B
+p	p	p	p	p	p	p	p
+r	k	b	q	k	b	k	r
+X: 4, Y: 6
+
+Checking move x:4, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Ally piece of type queen
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 5
+
+Checking move x:4, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Ally piece of type queen
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Checking spot x:4 y:4
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 4
+
+Made it past legal moves
+
+X: 7, Y: 1
+
+Checking move x:7, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Ally piece of type queen
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 2
+
+Checking move x:7, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Ally piece of type queen
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 3
+
+Made it past legal moves
+
+X: 3, Y: 7
+
+Checking move x:4, y:6
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Ally piece of type queen
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 6
+
+Checking move x:5, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 5, y: 5
+
+Checking move x:6, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 4
+
+Checking move x:7, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 3
+
+Made it past legal moves
+
+X: 7, Y: 0
+
+Checking move x:7, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 1
+
+Checking move x:7, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 2
+
+Checking move x:7, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 3
+
+Made it past legal moves
+
+X: 6, Y: 1
+
+Checking move x:6, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 2
+
+Checking move x:6, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 3
+
+Made it past legal moves
+
+X: 7, Y: 3
+
+Checking move x:6, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 4
+
+Checking move x:6, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 2
+
+Checking move x:7, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 4
+
+Checking move x:6, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 3
+
+Checking move x:7, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 2
+
+Checking move x:5, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 5, y: 5
+
+Checking move x:7, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 5
+
+Checking move x:5, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 5, y: 3
+
+Checking move x:7, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 1
+
+Checking move x:4, y:6
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Ally piece of type queen
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 6
+
+Checking move x:4, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 3
+
+Checking move x:7, y:0
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 0
+
+Checking move x:3, y:7
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Ally piece of type queen
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 7
+
+Checking move x:3, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 3
+
+Checking move x:2, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 2, y: 3
+
+Checking move x:1, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 1, y: 3
+
+Checking move x:0, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 0, y: 3
+
+Made it past legal moves
+
+X: 5, Y: 1
+
+Checking move x:5, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Checking move x:5, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Checking move x:6, y:6
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Made it past legal moves
+
+X: 4, Y: 1
+
+Checking move x:4, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Checking spot x:4 y:2
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 2
+
+Checking move x:4, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Checking spot x:4 y:2
+Checking spot x:4 y:3
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 3
+
+Made it past legal moves
+
+X: 5, Y: 1
+
+Checking move x:5, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Checking move x:5, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Checking move x:6, y:6
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Made it past legal moves
+
+X: 4, Y: 1
+
+Checking move x:4, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Checking spot x:4 y:2
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 2
+
+Checking move x:4, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Checking spot x:4 y:2
+Checking spot x:4 y:3
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 3
+
+Made it past legal moves
+
+X: 3, Y: 1
+
+Checking move x:3, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Checking spot x:2 y:2
+Checking spot x:1 y:3
+Checking spot x:0 y:4
+Checking spot x:-1 y:5
+Empty spot
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 2
+
+Checking move x:3, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Checking spot x:2 y:2
+Checking spot x:1 y:3
+Checking spot x:0 y:4
+Checking spot x:-1 y:5
+Empty spot
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 3
+
+Made it past legal moves
+
+X: 4, Y: 0
+
+Horizontal: -1, Vertical: -1
+
+Horizontal: -1, Vertical: 0
+
+Horizontal: -1, Vertical: 1
+
+Horizontal: 0, Vertical: -1
+
+Horizontal: 0, Vertical: 1
+
+Horizontal: 1, Vertical: -1
+
+Horizontal: 1, Vertical: 0
+
+Horizontal: 1, Vertical: 1
+
+Made it past legal moves
+
+X: 4, Y: 1
+
+Checking move x:4, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Checking spot x:4 y:2
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 2
+
+Checking move x:4, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Checking spot x:4 y:2
+Checking spot x:4 y:3
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 3
+
+Made it past legal moves
+
+X: 5, Y: 1
+
+Checking move x:5, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Checking move x:5, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Checking move x:6, y:6
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Made it past legal moves
+
+X: 2, Y: 1
+
+Checking move x:2, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 2, y: 2
+
+Checking move x:2, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 2, y: 3
+
+Made it past legal moves
+
+X: 3, Y: 1
+
+Checking move x:3, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Checking spot x:2 y:2
+Checking spot x:1 y:3
+Checking spot x:0 y:4
+Checking spot x:-1 y:5
+Empty spot
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 2
+
+Checking move x:3, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Checking spot x:2 y:2
+Checking spot x:1 y:3
+Checking spot x:0 y:4
+Checking spot x:-1 y:5
+Empty spot
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 3
+
+Made it past legal moves
+
+X: -1, Y: 1
+
+Made it past legal moves
+
+X: -1, Y: 1
+
+Made it past legal moves
+
+X: 5, Y: 1
+
+Checking move x:5, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Checking move x:5, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Checking move x:6, y:6
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Made it past legal moves
+
+X: 4, Y: 1
+
+Checking move x:4, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Checking spot x:4 y:2
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 2
+
+Checking move x:4, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Checking spot x:4 y:2
+Checking spot x:4 y:3
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 3
+
+Made it past legal moves
+
+X: 7, Y: 0
+
+Checking move x:7, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 1
+
+Checking move x:7, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 2
+
+Checking move x:7, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 3
+
+Checking move x:7, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 4
+
+Checking move x:7, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 5
+
+Checking move x:7, y:6
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 6
+
+Made it past legal moves
+
+X: 6, Y: 2
+
+Checking move x:7, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 3
+
+Checking move x:7, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 1
+
+Checking move x:5, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 5, y: 3
+
+Checking move x:5, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Queen or bishop threat 
+
+Allowing move: x: 5, y: 1
+
+Checking move x:7, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 2
+
+Checking move x:6, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 3
+
+Checking move x:5, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 5, y: 2
+
+Checking move x:6, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 1
+
+Checking move x:4, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 4
+
+Checking move x:6, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 4
+
+Checking move x:4, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 2
+
+Checking move x:6, y:0
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 0
+
+Checking move x:3, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 5
+
+Checking move x:6, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 5
+
+Checking move x:3, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 2
+
+Checking move x:2, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 2, y: 2
+
+Checking move x:1, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 1, y: 2
+
+Checking move x:0, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 0, y: 2
+
+Made it past legal moves
+
+X: 5, Y: 0
+
+Checking move x:6, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Checking spot x:6 y:0
+Rook threat
+
+Checking move x:7, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Ally piece of type pawn
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Checking spot x:6 y:0
+Rook threat
+
+Made it past legal moves
+
+X: 4, Y: 0
+
+Horizontal: -1, Vertical: -1
+
+Horizontal: -1, Vertical: 0
+
+Horizontal: -1, Vertical: 1
+
+Horizontal: 0, Vertical: -1
+
+Horizontal: 0, Vertical: 1
+
+Horizontal: 1, Vertical: -1
+
+Horizontal: 1, Vertical: 0
+
+Horizontal: 1, Vertical: 1
+
+Made it past legal moves
+
+X: 5, Y: 1
+
+Checking move x:5, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 5, y: 2
+
+Checking move x:5, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 5, y: 3
+
+Made it past legal moves
+
+X: -1, Y: 1
+
+Made it past legal moves
+
+X: 6, Y: 0
+
+Checking move x:7, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 1
+
+Checking move x:5, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Queen or bishop threat 
+
+Allowing move: x: 5, y: 1
+
+Checking move x:7, y:0
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 7, y: 0
+
+Checking move x:6, y:1
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 1
+
+Checking move x:5, y:0
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Rook threat
+
+Allowing move: x: 5, y: 0
+
+Checking move x:4, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 2
+
+Checking move x:6, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Queen or bishop threat 
+
+Allowing move: x: 6, y: 2
+
+Checking move x:3, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 3
+
+Checking move x:6, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 3
+
+Checking move x:2, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 2, y: 4
+
+Checking move x:6, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 4
+
+Checking move x:1, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 1, y: 5
+
+Checking move x:6, y:5
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Ally piece of type pawn
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 6, y: 5
+
+Made it past legal moves
+
+X: 4, Y: 1
+
+Made it past legal moves
+
+X: 3, Y: 1
+
+Checking move x:3, y:2
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Checking spot x:2 y:2
+Checking spot x:1 y:3
+Checking spot x:0 y:4
+Checking spot x:-1 y:5
+Empty spot
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 2
+
+Checking move x:3, y:3
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Checking spot x:2 y:2
+Checking spot x:1 y:3
+Checking spot x:0 y:4
+Checking spot x:-1 y:5
+Empty spot
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 3, y: 3
+
+Checking move x:4, y:4
+
+Checking white king 
+
+Starting spot: x: 4 y:7
+Checking spot x:5 y:8
+Empty spot
+Checking spot x:4 y:8
+Empty spot
+Checking spot x:3 y:8
+Empty spot
+Checking spot x:5 y:7
+Ally piece of type bishop
+Checking spot x:3 y:7
+Checking spot x:2 y:7
+Ally piece of type bishop
+Checking spot x:5 y:6
+Ally piece of type pawn
+Checking spot x:4 y:6
+Checking spot x:4 y:5
+Ally piece of type pawn
+Checking spot x:3 y:6
+Ally piece of type pawn
+Checking black king 
+
+Starting spot: x: 4 y:0
+Checking spot x:5 y:1
+Checking spot x:6 y:2
+Checking spot x:7 y:3
+Checking spot x:8 y:4
+Empty spot
+Checking spot x:4 y:1
+Ally piece of type pawn
+Checking spot x:3 y:1
+Checking spot x:2 y:2
+Checking spot x:1 y:3
+Checking spot x:0 y:4
+Checking spot x:-1 y:5
+Empty spot
+Checking spot x:5 y:0
+Ally piece of type bishop
+Checking spot x:3 y:0
+Ally piece of type queen
+Checking spot x:5 y:-1
+Empty spot
+Checking spot x:4 y:-1
+Empty spot
+Checking spot x:3 y:-1
+Empty spot
+Allowing move: x: 4, y: 4
+
+Made it past legal moves
+

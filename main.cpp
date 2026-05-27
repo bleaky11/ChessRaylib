@@ -7,6 +7,7 @@ int updateBoard(vector<vector<Piece*>>);
 int main() {
     Board newBoard = Board();
     newBoard.printBoard();
+    SetTraceLogLevel(LOG_WARNING);
     InitWindow(800, 800, "raylib mac test");
     SetTargetFPS(30);
     Vector2 selectedSquare;
