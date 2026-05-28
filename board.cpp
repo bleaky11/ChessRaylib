@@ -432,7 +432,8 @@ class Board{
          * If legal, added to possibleMoves
          * 
          */
-        void legalMoves(){
+        bool legalMoves(){
+            bool possibleCheck = false;
             this->possibleMoves.clear();
             int startx = currSelected->currPos[0];
             int starty = currSelected->currPos[1];
@@ -471,9 +472,13 @@ class Board{
                 }else if(currSelected->color == "black" && bid){
                     continue;
                 }else{
+                    if(wid || bid){
+                        possibleCheck = true;
+                    }
                     this->possibleMoves.push_back(make_pair(endx, endy));
                 }
             }
+            return possibleCheck;
         };
         /**
          * Checks if move is possible and returns point of move if it is 

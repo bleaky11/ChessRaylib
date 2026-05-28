@@ -13,6 +13,7 @@ int main() {
     Vector2 selectedSquare;
     bool waitingForInput = true;
     bool whiteTurn = true;//True is whites turn, false is black's turn
+    bool potentialCheckmate = false;
     int coordx;
     int coordy;
 
@@ -24,6 +25,7 @@ int main() {
             if(coordx >= 0 && coordy >= 0){
                 //Attempts to move piece if possible first
                 if(newBoard.move(coordx, coordy) == -1){
+                    potentialCheckmate = false;
                     if(whiteTurn){
                         if(newBoard.squares.at(coordy).at(coordx)->color != "black"){
                             newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
@@ -33,8 +35,21 @@ int main() {
                             newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
                         }else newBoard.currSelected = new Piece();
                     }
-                    newBoard.legalMoves();
+                    if(newBoard.legalMoves()){//If theres a potential check among the moves, this returns true
+                        potentialCheckmate = true;
+                    }
                 } else{
+                    if(whiteTurn && potentialCheckmate){
+                        king* wk = dynamic_cast<king*>(newBoard.squares.at(newBoard.whiteKing.second).at(newBoard.whiteKing.first));
+                        if(wk->inDanger(newBoard.squares, newBoard.whiteKing.first, newBoard.whiteKing.second)){
+
+                        }
+                    }else if(!whiteTurn && potentialCheckmate){
+                        king* wk = dynamic_cast<king*>(newBoard.squares.at(newBoard.whiteKing.second).at(newBoard.whiteKing.first));
+                        if(wk->inDanger(newBoard.squares, newBoard.whiteKing.first, newBoard.whiteKing.second)){
+
+                        }
+                    }
                     newBoard.currSelected = new Piece();
                     whiteTurn = !whiteTurn;
                 }
