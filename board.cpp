@@ -68,11 +68,11 @@ class pawn: public Piece{//Add enpassant and promotion
                 if(this->currPos[0]+1 >= 0 && this->currPos[0]+1 < 8 &&
                 boardState.at(this->currPos[1]+movement).at(this->currPos[0]+1)->color != this->color &&
                 boardState.at(this->currPos[1]+movement).at(this->currPos[0]+1)->pieceType != "BLANK")//If piece exists and is enemy
-                    possibleMoves.push_back({this->currPos[0]+1, this->currPos[0]+movement});
+                    possibleMoves.push_back({this->currPos[0]+1, this->currPos[1]+movement});
                 if(this->currPos[0]-1 >= 0 && this->currPos[0]-1 < 8&&
                 boardState.at(this->currPos[1]+movement).at(this->currPos[0]-1)->color != this->color &&
                 boardState.at(this->currPos[1]+movement).at(this->currPos[0]-1)->pieceType != "BLANK")
-                    possibleMoves.push_back({this->currPos[0]-1, this->currPos[0]+movement});
+                    possibleMoves.push_back({this->currPos[0]-1, this->currPos[1]+movement});
             }
             //Add a check for enpassant later
         }
