@@ -1,4 +1,4 @@
-Start game by typing: 
+After downloading files, start game by typing: 
 
 "make" into your terminal without the ""
 
