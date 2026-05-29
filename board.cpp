@@ -14,6 +14,7 @@ class Board;
  */
 class Piece{
     public:
+        bool moved;
         /**
          * White 
          * Black
@@ -32,7 +33,8 @@ class Piece{
         Piece()
             : color("BLANK"),
             currPos{-1, 1},
-            pieceType("BLANK")
+            pieceType("BLANK"),
+            moved(false)
         {}
         Piece(int x, int y) : Piece(){
             currPos[0] = x;
@@ -42,12 +44,12 @@ class Piece{
             color = inColor;
             pieceType = inPieceType;
             points = numpoints;
+            moved = false;
         }
 };
 
 class pawn: public Piece{//Add enpassant and promotion
     public:
-        bool moved = false;
         /**Check later on if enemy piece exists diagonally to filter out diagonal moves */
         void calcMovement(vector<vector<Piece*>>& boardState) override{
             possibleMoves.clear();
@@ -60,7 +62,7 @@ class pawn: public Piece{//Add enpassant and promotion
                 if(boardState.at(this->currPos[1]+movement).at(this->currPos[0])->pieceType == "BLANK"){
                     possibleMoves.push_back({this->currPos[0], this->currPos[1]+movement});
 
-                    if(this->currPos[1]+movement+movement >= 0 && this->currPos[1]+movement+movement < 8 && 
+                    if(!moved && this->currPos[1]+movement+movement >= 0 && this->currPos[1]+movement+movement < 8 && 
                         boardState.at(this->currPos[1]+movement+movement).at(this->currPos[0])->pieceType == "BLANK"){
                         possibleMoves.push_back({this->currPos[0], this->currPos[1]+movement+movement});
                     }
@@ -76,7 +78,9 @@ class pawn: public Piece{//Add enpassant and promotion
             }
             //Add a check for enpassant later
         }
-        pawn(int posx, int posy, string color): Piece(posx, posy, color, "pawn", 1){}
+        pawn(int posx, int posy, string color): Piece(posx, posy, color, "pawn", 1){
+            moved = false;
+        }
 };
 
 class king: public Piece{
@@ -409,6 +413,8 @@ class knight: public Piece{
  */
 class Board{
     public:
+        vector<Piece*> whitePieces;
+        vector<Piece*> blackPieces;
         pair<int, int> whiteKing;
         pair<int, int> blackKing;
         /**
@@ -491,10 +497,30 @@ class Board{
         int move(int endx, int endy){
             if(this->currSelected->color == "BLANK") return -1;
             if(find(possibleMoves.begin(), possibleMoves.end(), make_pair(endx, endy)) != possibleMoves.end()){//If move is in possibleMoves
-                Piece taken = *squares.at(endy).at(endx);
+                Piece* taken = squares.at(endy).at(endx);
+                int points = taken->points;//Saving points before piece gets deleted
+                
+                if(taken->color == "white"){
+                    whitePieces.erase(
+                        remove(whitePieces.begin(),
+                            whitePieces.end(),
+                            taken),
+                            whitePieces.end()
+                    );
+                }else if(taken->color == "black"){
+                    blackPieces.erase(
+                        remove(blackPieces.begin(),
+                            blackPieces.end(),
+                            taken),
+                            blackPieces.end()
+                    );
+                }
+                delete taken;
+
                 squares.at(currSelected->currPos[1]).at(currSelected->currPos[0]) = new Piece(currSelected->currPos[0], currSelected->currPos[1]);
                 currSelected->currPos[0] = endx;
                 currSelected->currPos[1] = endy;
+                currSelected->moved = true;
                 squares.at(endy).at(endx) = currSelected;
                 possibleMoves.clear();
                 if(currSelected->pieceType == "king"){
@@ -503,7 +529,7 @@ class Board{
                     }else 
                         blackKing = make_pair(endx, endy);
                 }
-                return taken.points;
+                return taken->points;
             }
             return -1;
         }
@@ -530,24 +556,30 @@ class Board{
 
                     //wanted to use switch case but it does not work with strings in c++
                     if(color != "BLANK"){
+                        Piece* newPiece;
                         if(pieceType == "king"){
-                            Piece* newPiece =  new king(j, i, color);
+                            newPiece =  new king(j, i, color);
                             squares.at(i).at(j) = (newPiece);
                         }else if(pieceType == "queen"){
-                            Piece* newPiece = new queen(j, i, color);
+                            newPiece = new queen(j, i, color);
                             squares.at(i).at(j) = (newPiece);
                         }else if(pieceType == "knight"){
-                            Piece* newPiece = new knight(j, i, color);
+                            newPiece = new knight(j, i, color);
                             squares.at(i).at(j) = (newPiece);
                         }else if(pieceType == "bishop"){
-                            Piece* newPiece = new bishop(j, i, color);
+                            newPiece = new bishop(j, i, color);
                             squares.at(i).at(j) = (newPiece);
                         }else if(pieceType == "rook"){
-                            Piece* newPiece = new rook(j, i, color);
+                            newPiece = new rook(j, i, color);
                             squares.at(i).at(j) = (newPiece);
                         }else{
-                            Piece* newPiece = new pawn(j, i, color);
+                            newPiece = new pawn(j, i, color);
                             squares.at(i).at(j) = (newPiece);
+                        }
+                        if(color == "white"){
+                            whitePieces.push_back(newPiece);
+                        }else{
+                            blackPieces.push_back(newPiece);                            
                         }
                     }else{
                         Piece* newPiece = new Piece(j, i);
