@@ -6,8 +6,7 @@ int updateBoard(vector<vector<Piece*>>);
 
 int main() {
     Board newBoard = Board();
-    newBoard.printBoard();
-    SetTraceLogLevel(LOG_WARNING);
+    SetTraceLogLevel(LOG_WARNING);//Stops printing every file loaded into terminal
     InitWindow(800, 800, "raylib mac test");
     SetTargetFPS(30);
     Vector2 selectedSquare;
@@ -35,19 +34,25 @@ int main() {
                             newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
                         }else newBoard.currSelected = new Piece();
                     }
-                    if(newBoard.legalMoves()){//If theres a potential check among the moves, this returns true
+                    if(newBoard.legalMoves(newBoard.currSelected)){//If theres a potential check among the moves, this returns true
                         potentialCheckmate = true;
                     }
                 } else{
                     if(whiteTurn && potentialCheckmate){
-                        king* wk = dynamic_cast<king*>(newBoard.squares.at(newBoard.whiteKing.second).at(newBoard.whiteKing.first));
-                        if(wk->inDanger(newBoard.squares, newBoard.whiteKing.first, newBoard.whiteKing.second)){
-
+                        king* bk = dynamic_cast<king*>(newBoard.squares.at(newBoard.blackKing.second).at(newBoard.blackKing.first));
+                        if(bk->inDanger(newBoard.squares, newBoard.blackKing.first, newBoard.blackKing.second)){
+                            if(newBoard.checkMate(whiteTurn)){
+                                printf("White Player has won\n");
+                                break;
+                            }
                         }
                     }else if(!whiteTurn && potentialCheckmate){
                         king* wk = dynamic_cast<king*>(newBoard.squares.at(newBoard.whiteKing.second).at(newBoard.whiteKing.first));
                         if(wk->inDanger(newBoard.squares, newBoard.whiteKing.first, newBoard.whiteKing.second)){
-
+                            if(newBoard.checkMate(whiteTurn)){
+                                printf("Black Player has won\n");
+                                break;
+                            }
                         }
                     }
                     newBoard.currSelected = new Piece();

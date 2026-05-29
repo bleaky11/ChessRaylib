@@ -437,26 +437,28 @@ class Board{
          * Checks if king is in danger
          * If legal, added to possibleMoves
          * 
+         * Uses selected piece instead of currSelected directly so that it could be reused for checkmate check
+         * 
          */
-        bool legalMoves(){
+        bool legalMoves(Piece* selectedPiece){
             bool possibleCheck = false;
             this->possibleMoves.clear();
-            int startx = currSelected->currPos[0];
-            int starty = currSelected->currPos[1];
-            currSelected->calcMovement(squares);//Using pointers, so I might not need to dynamic cast
-            for(int i = 0; i < currSelected->possibleMoves.size(); i++){
-                int endx = currSelected->possibleMoves[i].first;
-                int endy = currSelected->possibleMoves[i].second;
+            int startx = selectedPiece->currPos[0];
+            int starty = selectedPiece->currPos[1];
+            selectedPiece->calcMovement(squares);//Using pointers, so I might not need to dynamic cast
+            for(int i = 0; i < selectedPiece->possibleMoves.size(); i++){
+                int endx = selectedPiece->possibleMoves[i].first;
+                int endy = selectedPiece->possibleMoves[i].second;
                 bool wid = false;//White in danger
                 bool bid = false;//Black in danger
                 vector<vector<Piece*>> testSquares = squares;//Simulating the board if this piece moves
-                testSquares.at(endy).at(endx) = currSelected;
+                testSquares.at(endy).at(endx) = selectedPiece;
                 testSquares.at(starty).at(startx) =  new Piece(startx, starty);
-                if(this->currSelected->pieceType == "king"){//Updating king position for simulation
-                    if(this->currSelected->color == "white"){
-                        whiteKing = currSelected->possibleMoves[i];
+                if(selectedPiece->pieceType == "king"){//Updating king position for simulation
+                    if(selectedPiece->color == "white"){
+                        whiteKing = selectedPiece->possibleMoves[i];
                     }else{
-                        blackKing = currSelected->possibleMoves[i];
+                        blackKing = selectedPiece->possibleMoves[i];
                     }
                 }
                 if(testSquares.at(whiteKing.second).at(whiteKing.first)->pieceType == "king"){
@@ -466,16 +468,16 @@ class Board{
                     king* bk = dynamic_cast<king*>(testSquares.at(blackKing.second).at(blackKing.first));
                     if(bk->inDanger(testSquares, blackKing.first, blackKing.second)) bid = true;
                 }
-                if(this->currSelected->pieceType == "king"){//Returning king to proper position after simulation
-                    if(this->currSelected->color == "white"){
+                if(selectedPiece->pieceType == "king"){//Returning king to proper position after simulation
+                    if(selectedPiece->color == "white"){
                         whiteKing = make_pair(startx, starty);
                     }else{
                         blackKing = make_pair(startx, starty);
                     }
                 }
-                if(currSelected->color == "white" && wid){
+                if(selectedPiece->color == "white" && wid){
                     continue;
-                }else if(currSelected->color == "black" && bid){
+                }else if(selectedPiece->color == "black" && bid){
                     continue;
                 }else{
                     if(wid || bid){
@@ -597,6 +599,32 @@ class Board{
                 }
             }
             printf("%s", board.c_str());
+        }
+        /**
+         * Helper function to check if checkmate is occuring
+         * Does the majority of the work
+         */
+        bool checkMateHelper(pair<int, int> king, vector<Piece*> pieces){
+            for(int i = 0; i < pieces.size(); i++){
+                Piece* currPiece = pieces.at(i);
+                legalMoves(currPiece);
+                if(possibleMoves.size() > 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        /**
+         * Given that a king is being checked, can it excape the check in any way?
+         * 
+         * whiteTurn: Using a bool to check current turn
+         */
+        bool checkMate(bool whiteTurn){
+            if(!whiteTurn){
+                return checkMateHelper(whiteKing, whitePieces);
+            }else{
+                return checkMateHelper(blackKing, blackPieces);
+            }
         }
 };
 
