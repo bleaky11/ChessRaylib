@@ -14,56 +14,66 @@ int main() {
     bool whiteTurn = true;//True is whites turn, false is black's turn
     bool potentialCheckmate = false;
     int coordx;
-    int coordy;
+    int coordy; 
+    string winner = "";
 
     while (!WindowShouldClose()) {
-        if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
-            selectedSquare = GetMousePosition();
-            coordx = static_cast<int>(selectedSquare.x/100);
-            coordy = static_cast<int>(selectedSquare.y/100);
-            if(coordx >= 0 && coordy >= 0){
-                //Attempts to move piece if possible first
-                if(newBoard.move(coordx, coordy) == -1){
-                    potentialCheckmate = false;
-                    if(whiteTurn){
-                        if(newBoard.squares.at(coordy).at(coordx)->color != "black"){
-                            newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
-                        }else newBoard.currSelected = new Piece();
-                    }else{
-                        if(newBoard.squares.at(coordy).at(coordx)->color != "white"){
-                            newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
-                        }else newBoard.currSelected = new Piece();
-                    }
-                    if(newBoard.legalMoves(newBoard.currSelected)){//If theres a potential check among the moves, this returns true
-                        potentialCheckmate = true;
-                    }
-                } else{
-                    if(whiteTurn && potentialCheckmate){
-                        king* bk = dynamic_cast<king*>(newBoard.squares.at(newBoard.blackKing.second).at(newBoard.blackKing.first));
-                        if(bk->inDanger(newBoard.squares, newBoard.blackKing.first, newBoard.blackKing.second)){
-                            if(newBoard.checkMate(whiteTurn)){
-                                printf("White Player has won\n");
-                                break;
+        BeginDrawing();
+        ClearBackground(RAYWHITE);    
+        if(winner.empty()){
+            if(IsMouseButtonPressed(MOUSE_BUTTON_LEFT)){
+                selectedSquare = GetMousePosition();
+                coordx = static_cast<int>(selectedSquare.x/100);
+                coordy = static_cast<int>(selectedSquare.y/100);
+                if(coordx >= 0 && coordy >= 0){
+                    //Attempts to move piece if possible first
+                    if(newBoard.move(coordx, coordy) == -1){
+                        potentialCheckmate = false;
+                        if(whiteTurn){
+                            if(newBoard.squares.at(coordy).at(coordx)->color != "black"){
+                                newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
+                            }else newBoard.currSelected = new Piece();
+                        }else{
+                            if(newBoard.squares.at(coordy).at(coordx)->color != "white"){
+                                newBoard.currSelected = newBoard.squares.at(coordy).at(coordx);
+                            }else newBoard.currSelected = new Piece();
+                        }
+                        if(newBoard.legalMoves(newBoard.currSelected)){//If theres a potential check among the moves, this returns true
+                            potentialCheckmate = true;
+                        }
+                    } else{
+                        if(whiteTurn && potentialCheckmate){
+                            king* bk = dynamic_cast<king*>(newBoard.squares.at(newBoard.blackKing.second).at(newBoard.blackKing.first));
+                            if(bk->inDanger(newBoard.squares, newBoard.blackKing.first, newBoard.blackKing.second)){
+                                if(newBoard.checkMate(whiteTurn)){
+                                    printf("White Player has won\n");
+                                    winner = "white";
+                                }
+                            }
+                        }else if(!whiteTurn && potentialCheckmate){
+                            king* wk = dynamic_cast<king*>(newBoard.squares.at(newBoard.whiteKing.second).at(newBoard.whiteKing.first));
+                            if(wk->inDanger(newBoard.squares, newBoard.whiteKing.first, newBoard.whiteKing.second)){
+                                if(newBoard.checkMate(whiteTurn)){
+                                    printf("Black Player has won\n");
+                                    winner = "black";
+                                }
                             }
                         }
-                    }else if(!whiteTurn && potentialCheckmate){
-                        king* wk = dynamic_cast<king*>(newBoard.squares.at(newBoard.whiteKing.second).at(newBoard.whiteKing.first));
-                        if(wk->inDanger(newBoard.squares, newBoard.whiteKing.first, newBoard.whiteKing.second)){
-                            if(newBoard.checkMate(whiteTurn)){
-                                printf("Black Player has won\n");
-                                break;
-                            }
-                        }
+                        newBoard.currSelected = new Piece();
+                        whiteTurn = !whiteTurn;
                     }
-                    newBoard.currSelected = new Piece();
-                    whiteTurn = !whiteTurn;
                 }
             }
         }
-        BeginDrawing();
         DrawBoard(newBoard.possibleMoves);
-        ClearBackground(RAYWHITE);     
         updateBoard(newBoard.squares);
+        if(winner == "white"){
+            DrawRectangle(125, 375, 550, 50, BLACK);
+            DrawText("White Player wins!", 200, 375, 50, WHITE);
+        }else if(winner == "black"){
+            DrawRectangle(125, 375, 550, 50, RAYWHITE);
+            DrawText("Black Player wins!", 200, 375, 50, BLACK);
+        } 
         EndDrawing();
     }
 
