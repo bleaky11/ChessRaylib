@@ -1,8 +1,9 @@
 Start game by typing: 
 
-make
+"make" into your terminal without the ""
 
-...
+It will load the files for you which should be done in half a second
+then type:
 
 ./game
 
